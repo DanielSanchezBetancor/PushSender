@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.SpringLayout;
 
 public class looper {
-	private final String urlPost = "https://onesignal.com/api/v1/notifications";
+	private final String urlPost = //urlPost;
 	public String[][] sendData = new String[4][10];
 	private String[] text = new String[5];
 	int counter = 0;
@@ -175,8 +175,8 @@ public class looper {
 					con.setRequestMethod("POST");
 					con.setRequestProperty("Content-Type", "application/json");
 					con.setRequestProperty("charset", "UTF-8");
-					con.setRequestProperty("Authorization", "Basic MTMxYmNkYWEtYmFkNS00MDk1LWIzZmItZTQ5NjVmNWZhMTlh");
-					String param = "{ " + "\"app_id\": \"0bc5df2c-a888-4ae4-98c0-533587844b30\","
+					con.setRequestProperty("Authorization", "authorization");
+					String param = "{ " + "\"app_id\": \"appId","
 							+ "\"included_segments\":[\"Users " + new FileAlterer().getRegionFile() + "\"],"
 							+ "\"contents\": { \"en\": \"" + sendData[1][i] + "\"}, "
 							+ "\"headings\": { \"en\": \"" + sendData[0][i] + "\"}, "
